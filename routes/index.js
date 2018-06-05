@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const validate = require('../controllers/validationController');
+const scrape = require('../controllers/scrapingController');
+const send = require('../controllers/messagingController');
 
 /* GET home page. */
 
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' });
+	res.render('index', { title: 'Express' });
 });
 
 // TODO: Look into AirBnB style guide for comments
@@ -25,6 +28,12 @@ router.get('/', (req, res, next) => {
   ? https://twitter.com/wesbos/status/1001164727987458048
 */
 
-// router.post('/track', INSERT MIDDLEWARE);
+router.post('/track',
+  validate.url,
+  validate.phone,
+  scrape.product,
+  send.email,
+  send.sms
+);
 
 module.exports = router;
