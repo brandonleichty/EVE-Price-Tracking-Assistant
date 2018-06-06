@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 // Import environmental variables from our variables.env file
 require('dotenv').config({ path: 'variables.env' });
 
+// Import all of our models
+require('./models/ProductModel');
 
 /*
   1. Connect to our mongo database
