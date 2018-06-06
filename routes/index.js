@@ -3,6 +3,7 @@ const router = express.Router();
 const validate = require('../controllers/validationController');
 const scrape = require('../controllers/scrapingController');
 const send = require('../controllers/messagingController');
+const database = require('../controllers/databaseController');
 
 /* GET home page. */
 
@@ -31,9 +32,11 @@ router.get('/', (req, res, next) => {
 router.post('/track',
   validate.url,
   validate.phone,
+  validate.email,
   scrape.product,
   send.email,
-  send.sms
+  send.sms,
+  database.writeProduct
 );
 
 module.exports = router;
