@@ -1,11 +1,10 @@
 # EVE-Price-Tracking-Assistant
 
-🤖 EVE keeps track of product prices from popular websitse and updates you via text or email if the prices change. This is being built for the capstone project of Treehouse's Full-Stack JavaScript Techdegree.
+🤖 EVE keeps track of product prices from Amazon (and hopefully other sites) and updates you via text or email if the price changes. This is being built for the capstone project of Treehouse's Full-Stack JavaScript Techdegree.
 
 ## APIs to be used in project:
 
 * Twilio
-* SendGrid
 
 ## Frameworks
 
@@ -16,6 +15,10 @@
 
 * MongoDB with Mongoose
 * mLab
+
+## Other notable tech used:
+
+* Nodemailer
 
 ### Treehouse Techdegree capstone project summary and guidelines:
 
