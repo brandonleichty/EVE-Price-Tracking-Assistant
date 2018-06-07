@@ -32,12 +32,10 @@ exports.product = (req, res, next) => {
 			TODO: throw error if the price, name, or image can't be found
 		*/
 
-		req.body.title = helpers.titleCase(
-			await page.evaluate(
-				select => document.querySelector(select.title).innerText.trim(),
-				cssSelectors
-			)
-		);
+
+		req.body.title = await page.evaluate(
+				select => document.querySelector(select.title).innerText.trim(), cssSelectors);
+			console.log(req.body.title);
 
 		req.body.price = await page.evaluate(
 			select => document.querySelector(select.price).innerText.trim(),
