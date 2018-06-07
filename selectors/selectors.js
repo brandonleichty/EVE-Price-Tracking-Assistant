@@ -4,7 +4,7 @@ const selectors = {
 	target: {
 		company: 'Target',
 		title:
-			'#mainContainer > div > div > div.sc-hlILIN.jsaTBW > div > div:nth-child(1) > h1 > span[itemprop="title"]',
+			'h1 > span[itemprop="title"]',
 		price:
 			'#mainContainer > div > div > div.sc-hlILIN.jsaTBW > div > div.h-padding-h-default.h-padding-t-tight.styles__ResponsiveSidebar-vttgqz-0.bCJeMz > div span',
 		image:
@@ -20,8 +20,8 @@ const selectors = {
 	},
 	rei: {
 		company: 'REI',
-		title: '.product-title',
-		price: '.off-price',
+		title: '.product-title > span',
+		price: '.regular-price',
 		image: '.media-center-primary-image'
 	},
 	'bananarepublic.gap': {
@@ -52,6 +52,18 @@ const selectors = {
 		title: '.title',
 		price: '.actual-price',
 		image: 'div.owl-item.active.center > img'
+	},
+	backcountry: {
+		company: 'Backcountry',
+		title: '.product-name',
+		price: '.product-pricing__retail',
+		image: '.ui-flexslider-active-slide > img'
+	},
+	amazon: {
+		company: 'Amazon',
+		title: '#productTitle',
+		price: '#priceblock_ourprice',
+		image: '#landingImage'
 	}
 };
 
