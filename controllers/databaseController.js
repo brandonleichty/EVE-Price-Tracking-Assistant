@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Product = mongoose.model('Product');
 
 
-exports.writeProduct = (req, res) => {
+exports.writeProduct = (req, res, next) => {
 	Product.create(req.body, (err, user) => {
 		if (err) {
 			console.log(`Oops! There was an error: ${err.message}`);
